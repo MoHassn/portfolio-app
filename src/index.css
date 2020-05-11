@@ -1,13 +1,169 @@
-body {
+/* The general elements style */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+  scroll-behavior: smooth;
+  text-align: center;
+  color: #0b6565;
+  font: 16px/1.2em "Inconsolata", monospace;
+}
+
+/* header style */
+header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 100px;
+  background: linear-gradient(12deg, #28a689, #bdfff5);
+}
+
+.nav-list {
+  list-style: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 5px;
+}
+
+.nav-link {
+  text-decoration: none;
+  min-width: 48px;
+  padding: 10px;
+  margin: 5px;
+  color: #cbcbcb;
+  background-color: #0b6565;
+  border-radius: 20px;
+}
+
+.nav-link:hover {
+  color: #0b2c2c;
+  background-color: #bdfff5;
+}
+
+/* styling the main content*/
+#about {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(25deg, #cbcbcb, #fff);
+}
+
+.main-heading,
+.title,
+.bio {
+  margin: 10px;
+  padding: 5px;
+}
+
+/* projects section style*/
+#projects {
+  background-color: #ddd;
+  padding-top: 100px;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projects-heading {
+  margin: 20px;
+  padding: 10px;
+}
+
+.project {
+  margin: 10px;
+  flex-grow: 1;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 330px;
+}
+
+figcaption {
+  font-size: 1.2em;
+  padding: 10px;
+}
+/* styling the contact section */
+#contact {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #bdfff5;
+}
+
+.contact-header {
+  margin: 15px;
+  padding: 10px;
+}
+
+.contact-list {
+  list-style: none;
+}
+
+.contact-link {
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px;
+  padding: 5px;
+  font: bold 1.2em "Acme", sans-serif;
+  color: #0b6565;
+}
+
+.contact-link:hover {
+  transform: scale(1.1, 1.1);
+  color: #28a689;
+}
+
+footer {
+  background-color: #28a68980;
+}
+
+@media screen and (min-width: 550px) {
+  html,
+  body {
+    font: 18px/1.25em "Inconsolata", monospace;
+  }
+
+  nav {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  nav {
+    width: 50%;
+  }
+
+  .bio {
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  nav {
+    width: 40%;
+  }
+
+  .nav-link {
+    padding: 10px 20px;
+  }
+
+  .logo {
+    margin-left: 20px;
+  }
 }
