@@ -28,3 +28,8 @@ figcaption {
   font-size: 1.2em;
   padding: 10px;
 }
+
+.project-link {
+  text-decoration: none;
+  color: #0b6565;
+}

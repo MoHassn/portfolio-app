@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -36,8 +37,8 @@ const projects = [
 
 const Projects = () => {
   let projectsList = projects.length ? (
-    projects.map(({ name, codepen, imgURL, id }) => (
-      <Project name={name} codepen={codepen} imageURL={imgURL} key={id} />
+    projects.map(({ name, imgURL, id }) => (
+      <Project name={name} imageURL={imgURL} id={id} key={id} />
     ))
   ) : (
     <div>sorry, couldn't fetch projects</div>
@@ -50,19 +51,21 @@ const Projects = () => {
   );
 };
 
-const Project = ({ name, codepen, imageURL }) => {
+const Project = ({ name, imageURL, id }) => {
   return (
-    <figure className="project">
-      <a href={codepen} target="_blank" rel="noopener noreferrer">
-        <img
-          className="project-image"
-          src={imageURL}
-          alt="survey form project sreenshot"
-          width="300"
-        />
-      </a>
-      <figcaption>{name}</figcaption>
-    </figure>
+    <div className="project">
+      <Link to={`projects/${id}`} className="project-link">
+        <figure className="project">
+          <img
+            className="project-image"
+            src={imageURL}
+            alt="survey form project sreenshot"
+            width="300"
+          />
+          <figcaption>{name}</figcaption>
+        </figure>
+      </Link>
+    </div>
   );
 };
 export default Projects;
