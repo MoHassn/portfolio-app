@@ -22,36 +22,6 @@ body {
   padding: 5px;
 }
 
-/* projects section style*/
-#projects {
-  background-color: #ddd;
-  padding-top: 100px;
-}
-
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.projects-heading {
-  margin: 20px;
-  padding: 10px;
-}
-
-.project {
-  margin: 10px;
-  flex-grow: 1;
-}
-
-.project-image {
-  width: 100%;
-  max-width: 330px;
-}
-
-figcaption {
-  font-size: 1.2em;
-  padding: 10px;
-}
 /* styling the contact section */
 #contact {
   height: 40vh;
