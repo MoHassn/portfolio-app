@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./images/logo.svg";
+import Header from "./components/Header";
 import tirbutePage from "./images/tribute-page.png";
 import surveyForm from "./images/suvey-form.png";
 import documentationPage from "./images/documentaion-page.png";
@@ -9,28 +9,7 @@ import landingPage from "./images/product-landing.png";
 function App() {
   return (
     <div className="App">
-      <header>
-        <img className="logo" src={logo} alt="logo" width="100" height="100" />
-        <nav>
-          <ul className="nav-list">
-            <li>
-              <a className="nav-link" href="#about">
-                ABOUT
-              </a>
-            </li>
-            <li>
-              <a className="nav-link" href="#projects">
-                PROJECTS
-              </a>
-            </li>
-            <li>
-              <a className="nav-link" href="#contact">
-                CONTACT
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
       <main>
         <section id="about">
           <h1 className="main-heading">Hi, I am HASSAN</h1>
