@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
+import About from "./components/About";
 import tirbutePage from "./images/tribute-page.png";
 import surveyForm from "./images/suvey-form.png";
 import documentationPage from "./images/documentaion-page.png";
@@ -11,15 +12,7 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        <section id="about">
-          <h1 className="main-heading">Hi, I am HASSAN</h1>
-          <h2 className="title">FRONT-END WEB DEVELOPER</h2>
-          <p className="bio">
-            My name is Mohamed Hassan. I am a computer and systems engineering
-            student and front-end web developer. I've been coding for the last
-            three years.
-          </p>
-        </section>
+        <About />
         <section id="projects">
           <h2 className="projects-heading">And these are some of my works</h2>
           <div className="projects-container">

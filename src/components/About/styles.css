@@ -1,0 +1,7 @@
+#about {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(25deg, #cbcbcb, #fff);
+}
