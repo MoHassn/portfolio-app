@@ -1,94 +1,68 @@
 import React from "react";
-import tirbutePage from "./imgs/tribute-page.png";
-import surveyForm from "./imgs/suvey-form.png";
-import documentationPage from "./imgs/documentaion-page.png";
-import prevPortfolio from "./imgs/previous-portfolio.png";
-import landingPage from "./imgs/product-landing.png";
 import "./styles.css";
 
+const projects = [
+  {
+    name: "Survey form",
+    imgURL: "https://i.imgur.com/2odg6pk.png",
+    codepen: "https://codepen.io/mohamedhassan/full/orKVbd",
+    id: "1",
+  },
+  {
+    name: "Tribute page",
+    imgURL: "https://i.imgur.com/y7fJvSJ.png",
+    codepen: "https://codepen.io/mohamedhassan/full/JQqaqW",
+    id: "2",
+  },
+  {
+    name: "Technical documentation page",
+    imgURL: "https://i.imgur.com/xctsboO.png",
+    codepen: "https://codepen.io/mohamedhassan/full/OKpdNR",
+    id: "3",
+  },
+  {
+    name: "My previous portfolio",
+    imgURL: "https://i.imgur.com/8S4gGOQ.png",
+    codepen: "https://codepen.io/mohamedhassan/full/wVpbLb",
+    id: "4",
+  },
+  {
+    name: "Product landing page",
+    imgURL: "https://i.imgur.com/74oV2Ar.png",
+    codepen: "https://codepen.io/mohamedhassan/full/aebqRv",
+    id: "5",
+  },
+];
+
 const Projects = () => {
+  let projectsList = projects.length ? (
+    projects.map(({ name, codepen, imgURL, id }) => (
+      <Project name={name} codepen={codepen} imageURL={imgURL} key={id} />
+    ))
+  ) : (
+    <div>sorry, couldn't fetch projects</div>
+  );
   return (
     <section id="projects">
       <h2 className="projects-heading">And these are some of my works</h2>
-      <div className="projects-container">
-        <figure className="project">
-          <a
-            href="https://codepen.io/mohamedhassan/full/orKVbd"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="project-image"
-              src={surveyForm}
-              alt="survey form project sreenshot"
-              width="300"
-            />
-          </a>
-          <figcaption>Survey form</figcaption>
-        </figure>
-        <figure className="project">
-          <a
-            href="https://codepen.io/mohamedhassan/full/JQqaqW"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="project-image"
-              src={tirbutePage}
-              alt="tribute page project screenshot"
-              width="300"
-            />
-          </a>
-          <figcaption>Tribute page</figcaption>
-        </figure>
-        <figure className="project">
-          <a
-            href="https://codepen.io/mohamedhassan/full/OKpdNR"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="project-image"
-              src={documentationPage}
-              alt="documentation page project  screenshot"
-              width="300"
-            />
-          </a>
-          <figcaption>Technical documentation page</figcaption>
-        </figure>
-        <figure className="project">
-          <a
-            href="https://codepen.io/mohamedhassan/full/wVpbLb"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="project-image"
-              src={prevPortfolio}
-              alt="previous protfolio project screenshot"
-              width="300"
-            />
-          </a>
-          <figcaption>My previous portfolio</figcaption>
-        </figure>
-        <figure className="project">
-          <a
-            href="https://codepen.io/mohamedhassan/full/aebqRv"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="project-image"
-              src={landingPage}
-              alt="landing page project screenshot"
-              width="300"
-            />
-          </a>
-          <figcaption>Product landing page</figcaption>
-        </figure>
-      </div>
+      <div className="projects-container">{projectsList}</div>
     </section>
   );
 };
 
+const Project = ({ name, codepen, imageURL }) => {
+  return (
+    <figure className="project">
+      <a href={codepen} target="_blank" rel="noopener noreferrer">
+        <img
+          className="project-image"
+          src={imageURL}
+          alt="survey form project sreenshot"
+          width="300"
+        />
+      </a>
+      <figcaption>{name}</figcaption>
+    </figure>
+  );
+};
 export default Projects;
