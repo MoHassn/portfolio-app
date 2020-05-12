@@ -22,38 +22,6 @@ body {
   padding: 5px;
 }
 
-/* styling the contact section */
-#contact {
-  height: 40vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #bdfff5;
-}
-
-.contact-header {
-  margin: 15px;
-  padding: 10px;
-}
-
-.contact-list {
-  list-style: none;
-}
-
-.contact-link {
-  display: inline-block;
-  text-decoration: none;
-  margin: 5px;
-  padding: 5px;
-  font: bold 1.2em "Acme", sans-serif;
-  color: #0b6565;
-}
-
-.contact-link:hover {
-  transform: scale(1.1, 1.1);
-  color: #28a689;
-}
-
 footer {
   background-color: #28a68980;
 }
