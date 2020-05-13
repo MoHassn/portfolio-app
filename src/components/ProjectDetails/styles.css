@@ -1,0 +1,47 @@
+.project-details-container {
+  margin-top: 110px;
+  padding: 1.2em;
+}
+
+.project-name {
+  text-align: left;
+  padding: 1.2em;
+}
+
+.project-img {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.description-container {
+  margin: 1em;
+  padding: 1em;
+}
+
+.codepen-button {
+  text-decoration: none;
+  color: #cbcbcb;
+  background-color: #0b6565;
+  display: block;
+  font-size: 1.3em;
+  margin: 20px auto;
+  padding: 15px 20px;
+  width: 300px;
+}
+.codepen-button:hover {
+  opacity: 0.9;
+}
+
+@media screen and (min-width: 700px) {
+  .project-details {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .project-details-container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
