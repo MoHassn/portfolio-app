@@ -1,33 +1,35 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { NavHashLink as NavLink } from "react-router-hash-link";
 import logo from "./imgs/logo.svg";
 import "./styles.css";
 
 const Header = () => {
   return (
-    <>
-      <header>
+    <header>
+      <Link to="/">
         <img className="logo" src={logo} alt="logo" width="100" height="100" />
-        <nav>
-          <ul className="nav-list">
-            <li>
-              <a className="nav-link" href="#about">
-                ABOUT
-              </a>
-            </li>
-            <li>
-              <a className="nav-link" href="#projects">
-                PROJECTS
-              </a>
-            </li>
-            <li>
-              <a className="nav-link" href="#contact">
-                CONTACT
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </>
+      </Link>
+      <nav>
+        <ul className="nav-list">
+          <li>
+            <NavLink className="nav-link" smooth to="/#about">
+              ABOUT
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="nav-link" smooth to="/#projects">
+              PROJECTS
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="nav-link" smooth to="/#contact">
+              CONTACT
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 
