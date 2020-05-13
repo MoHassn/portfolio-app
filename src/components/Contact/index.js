@@ -1,10 +1,11 @@
 import React from "react";
 import "./styles.css";
+import ContactForm from "../ContactForm";
 
 const Contact = () => {
   return (
     <section id="contact">
-      <h2 className="contact-header">Sure, happy to contact me!</h2>
+      <h2 className="contact-header">Contact me via social media!</h2>
       <ul className="contact-list">
         <li>
           <a
@@ -27,6 +28,7 @@ const Contact = () => {
           </a>
         </li>
       </ul>
+      <ContactForm />
     </section>
   );
 };
