@@ -5,30 +5,40 @@ import { Link } from "react-router-dom";
 const projects = [
   {
     name: "Survey form",
+    description:
+      "This is a project description and I will customize it later, thank you!",
     imgURL: "https://i.imgur.com/2odg6pk.png",
     codepen: "https://codepen.io/mohamedhassan/full/orKVbd",
     id: "1",
   },
   {
     name: "Tribute page",
+    description:
+      "This is a project description and I will customize it later, thank you!",
     imgURL: "https://i.imgur.com/y7fJvSJ.png",
     codepen: "https://codepen.io/mohamedhassan/full/JQqaqW",
     id: "2",
   },
   {
     name: "Technical documentation page",
+    description:
+      "This is a project description and I will customize it later, thank you!",
     imgURL: "https://i.imgur.com/xctsboO.png",
     codepen: "https://codepen.io/mohamedhassan/full/OKpdNR",
     id: "3",
   },
   {
     name: "My previous portfolio",
+    description:
+      "This is a project description and I will customize it later, thank you!",
     imgURL: "https://i.imgur.com/8S4gGOQ.png",
     codepen: "https://codepen.io/mohamedhassan/full/wVpbLb",
     id: "4",
   },
   {
     name: "Product landing page",
+    description:
+      "This is a project description and I will customize it later, thank you!",
     imgURL: "https://i.imgur.com/74oV2Ar.png",
     codepen: "https://codepen.io/mohamedhassan/full/aebqRv",
     id: "5",
